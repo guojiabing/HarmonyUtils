@@ -6,13 +6,13 @@
 ## Install
 
 ```sh
-ohpm i await-to-js --save
+ohpm install await-to-arkts --save
 ```
 
 ## Usage
 
 ```extendtypescript
-import to from 'await-to-js';
+import to from 'await-to-arkts';
 
 async function asyncTaskWithCb(cb) {
   let err, user, savedTask, notification;
@@ -39,8 +39,8 @@ async function asyncTaskWithCb(cb) {
 
 async function asyncFunctionWithThrow() {
   const [err, user] = await to(UserModel.findById(1));
-  if (!user) throw new Error('User not found');
 
+  if (!user) throw new Error('User not found');
 }
 ```
 
